@@ -1,0 +1,540 @@
+body {
+  /* Set default font and background styling for the body */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #f1f2f7;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  /* Default link styling */
+  color: #777;
+  text-decoration: none;
+}
+
+.padding-top {
+  /* Add padding to the top */
+  padding-top: 20px;
+}
+
+.login-page {
+  /* Styling for the login page container */
+  width: 350px;
+  margin: 5% 40% 6% auto;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #f2f2f2;
+}
+
+.login-page .text-center {
+  /* Margin for centered text in the login page */
+  margin-bottom: 10px;
+}
+
+.box {
+  /* Styling for boxed elements */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #f2f2f2;
+}
+
+.page {
+  /* Page content styling */
+  position: relative;
+  display: block;
+  top: 50px;
+  left: 0;
+  padding: 35px 15px 20px 270px;
+}
+
+.page-lgn {
+  /* Alternate page layout */
+  position: relative;
+  display: block;
+  top: 50px;
+  left: 0;
+  padding: 35px 15px 20px 270px;
+}
+
+.bg-green {
+  /* Green background color */
+  background-color: #A3C86D;
+}
+
+.bg-blue {
+  /* Blue background color */
+  background-color: #7ACBEE;
+}
+
+.bg-yellow {
+  /* Yellow background color */
+  background-color: #FDD761;
+}
+
+.bg-red {
+  /* Red background color */
+  background-color: #FF7857;
+}
+
+.bg-secondary1 {
+  /* Secondary background color 1 */
+  background-color: #b17897;
+}
+
+.bg-blue2 {
+  /* Secondary blue background color */
+  background-color: #7a83ee;
+}
+
+.panel-default>.panel-heading {
+  /* Styling for panel headings */
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #3498DB;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 15px;
+}
+
+.panel-box {
+  /* Panel box styling */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: none;
+}
+
+.panel-value {
+  /* Panel value section styling */
+  width: 60%;
+}
+
+.panel-icon {
+  /* Panel icon styling */
+  padding: 30px;
+  width: 40%;
+  border-radius: 0;
+}
+
+.panel-icon {
+  /* Rounded corners for panel icon */
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+.panel-value {
+  /* Rounded corners for panel value */
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.panel-value h2 {
+  /* Styling for h2 elements in panel value */
+  margin-top: 30px;
+}
+
+.panel-icon i {
+  /* Icon styling inside panel icon */
+  line-height: 65px;
+  font-size: 40px;
+  color: #fff;
+}
+
+#header {
+  /* Header styling */
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+header>.logo {
+  /* Logo styling in header */
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  width: 250px;
+  background-color: #087da4;
+}
+
+.header-date {
+  /* Styling for the date in the header */
+  color: #9b9b9b;
+  margin-left: 20px;
+}
+
+.info-menu {
+  /* Menu info styling */
+  height: 60px;
+  margin: 0;
+  line-height: 60px;
+  padding: 0 15px;
+}
+
+.info-menu li.profile {
+  /* Profile section within the menu */
+  position: relative;
+}
+
+.profile a.toggle {
+  /* Toggle link styling in profile */
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(150, 150, 158, 1.0);
+  position: relative;
+  padding: 10px 10px 10px 0;
+  margin: 0;
+  background: #f9f9f9;
+  border-radius: 30px;
+}
+
+.info-menu li.profile a img {
+  /* Profile image styling */
+  width: 30px;
+  height: 30px;
+}
+
+.dropdown-menu {
+  /* Dropdown menu styling */
+  margin-top: 4px;
+  border-color: #fefefe;
+  border-radius: 0;
+  box-shadow: 0px 0px 5px rgba(86, 96, 117, 0.15);
+  -moz-box-shadow: 0px 0px 5px rgba(86, 96, 117, 0.15);
+  -webkit-box-shadow: 0px 0px 5px rgba(86, 96, 117, 0.15);
+}
+
+.dropdown-menu li {
+  /* List items within dropdown menu */
+  margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 35px;
+}
+
+.dropdown-menu li a {
+  /* Links within dropdown menu */
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  position: relative;
+  line-height: 30px;
+  width: 100%;
+  border-bottom: 1px solid #f4faf9;
+}
+
+.dropdown-menu li a i {
+  /* Icon styling within dropdown menu links */
+  margin-right: 5px;
+}
+
+.dropdown-menu li.last a {
+  /* Last link in dropdown menu, no bottom border */
+  border-bottom: 0;
+}
+
+.datepicker {
+  /* Datepicker alignment */
+  text-align: center;
+}
+
+.sidebar {
+  /* Sidebar styling */
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  padding: 65px 0 0;
+  height: 100%;
+  width: 250px;
+  background: #272727;
+  border-right: 1px solid #ddd;
+  text-align: center;
+}
+
+.sidebar ul li:hover,
+.submenu ul li:hover {
+  /* Hover effect for sidebar and submenu */
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.sidebar ul {
+  /* Sidebar unordered list styling */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar ul li {
+  /* Sidebar list item styling */
+  display: block;
+}
+
+.sidebar ul li:hover,
+ul.submenu {
+  /* Hover effect background color */
+  background-color: #35404d;
+}
+
+.sidebar ul li a:hover {
+  /* Link color on hover */
+  color: white;
+}
+
+.sidebar ul li a,
+ul.submenu li a {
+  /* Sidebar and submenu link styling */
+  color: #aeb2b7;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: left;
+}
+
+.sidebar ul li a span,
+.sidebar ul li i {
+  /* Sidebar link and icon styling */
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px rgba(0, 0, 0, 1);
+}
+
+.sidebar ul li a i {
+  /* Icon styling within sidebar links */
+  color: #aeb2b7;
+  padding: 15px 22px;
+  text-align: center;
+}
+
+ul.submenu {
+  /* Submenu styling */
+  display: none;
+  position: relative;
+}
+
+ul.submenu li a:hover {
+  /* Hover effect for submenu links */
+  background-color: #35404d;
+}
+
+ul.submenu li a {
+  /* Padding for submenu links */
+  padding-left: 45px;
+}
+
+ul.submenu li:before {
+  /* Dotted border for submenu links */
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  border: 1px dotted #d7d7d7;
+  border-width: 0 0 0 1px;
+}
+
+ul.submenu li a:before {
+  /* Horizontal dotted line for submenu links */
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 7px;
+  left: 25px;
+  top: 18px;
+  border-top: 1px dotted #d7d7d7;
+}
+
+.sale_report_header {
+  /* Styling for sale report header */
+  padding: 15px 0;
+}
+
+table td h6 {
+  /* Table cell header styling */
+  margin: 0 0 0.2em 0;
+}
+
+table tfoot tr td:first-child {
+  /* Footer first cell in table, no border */
+  border: 0;
+}
+
+table tfoot tr td:last-child {
+  /* Footer last cell in table, top border */
+  border-top: 1px solid #ccc;
+}
+
+table td h6,
+table tfoot tr td:last-child {
+  /* General styling for table text */
+  color: #000;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.form-control {
+  /* Form control styling */
+  color: #646464;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -moz-transition: all .15s ease-out;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
+}
+
+.form-control:focus {
+  /* Focus state for form control */
+  background: #f8f8f8;
+  border-color: #3498DB;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn {
+  /* Button styling */
+  border-radius: 3px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-primary {
+  /* Primary button styling */
+  color: #fff;
+  background-color: #51aded;
+  border-color: #3d8fd8;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active {
+  /* Hover and active states for primary button */
+  color: #fff;
+  background-color: #3175b8;
+  border-color: #3d8fd8;
+}
+
+.btn-success {
+  /* Success button styling */
+  background-color: #2ecc71;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success.focus,
+.btn-success:active,
+.btn-success.active {
+  /* Hover and active states for success button */
+  background-color: #27ae60;
+}
+
+.btn-warning {
+  /* Warning button styling */
+  background-color: #e7c13e;
+  border-color: #dfba3c;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus,
+.btn-warning:active,
+.btn-warning.active {
+  /* Hover and active states for warning button */
+  background-color: #d0ac2c;
+  border-color: #dfba3c;
+}
+
+.btn-danger {
+  /* Danger button styling */
+  background-color: #ed5153;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger.focus,
+.btn-danger:active,
+.btn-danger.active {
+  /* Hover and active states for danger button */
+  background-color: #bb282a;
+}
+
+.input-group-addon {
+  /* Input group addon styling */
+  background-color: #fcfcfc;
+  border: 1px solid #dbdbdb;
+  border-radius: 0;
+}
+
+input[type=file] {
+  /* File input styling */
+  text-indent: -99999px;
+}
+
+td img.img-thumbnail {
+  /* Thumbnail image styling */
+  width: 125px;
+  height: 125px;
+  vertical-align: top;
+}
+
+.img-avatar {
+  /* Avatar image styling */
+  width: 50px;
+  height: 50px;
+}
+
+.jumbotron {
+  /* Jumbotron styling */
+  margin-bottom: 0;
+}
+
+.list-group-item:first-child,
+.list-group-item:last-child {
+  /* Remove border-radius for list group items */
+  border-radius: 0;
+}
+
+.profile .jumbotron {
+  /* Profile section jumbotron styling */
+  border-radius: 3px 3px 0 0;
+}
+
+.profile .jumbotron h3 {
+  /* Jumbotron heading styling */
+  color: white;
+}
+
+img.img-size-2 {
+  /* Image size styling */
+  width: 125px;
+  height: 125px;
+}

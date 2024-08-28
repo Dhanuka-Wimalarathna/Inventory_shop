@@ -12,14 +12,14 @@ class MySqli_DB {
 
     // Open database connection
     public function db_connect() {
-        $this->con = mysqli_connect(DB_HOST, DB_USER, DB_PASS);
-        if (!$this->con) {
+        // Initialize MySQLi with SSL support
+        $this->con = mysqli_init();
+        $ssl_ca = '/home/site/wwwroot/certs/ca-cert.pem'; // Ensure this path is correct
+        $this->con->ssl_set(null, null, $ssl_ca, null, null);
+
+        // Establish a secure connection
+        if (!$this->con->real_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, 3306, null, MYSQLI_CLIENT_SSL)) {
             die("Database connection failed: " . mysqli_connect_error());
-        } else {
-            $select_db = $this->con->select_db(DB_NAME);
-            if (!$select_db) {
-                die("Failed to select database: " . mysqli_connect_error());
-            }
         }
     }
 

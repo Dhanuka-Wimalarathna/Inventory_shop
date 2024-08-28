@@ -6,7 +6,7 @@ define('DB_PASS', '4lyKxq7$uC3mzUeW');  // Set database password
 define('DB_NAME', 'inventory_system');  // Set database name
 
 // Path to your SSL certificate
-$ssl_ca = '/home/site/wwwroot/certs/ca-cert.pem'; // Ensure this path is correct
+$ssl_ca = '/home/site/wwwroot/ca-cert.pem'; // Ensure this path is correct
 
 // Create a new MySQLi object and establish a secure connection using SSL
 $conn = mysqli_init();

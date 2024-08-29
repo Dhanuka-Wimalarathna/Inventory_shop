@@ -1,17 +1,3 @@
-<?php
-  // Start output buffering
-  ob_start();
-
-  // Include necessary files and functions
-  require_once('includes/load.php');
-
-  // Redirect to the home page if the user is already logged in
-  if ($session->isUserLoggedIn(true)) {
-    redirect('home.php', false);
-  }
-?>
-
-<?php include_once('layouts/header.php'); ?>
 
 <div class="login-page">
   <div class="text-center">

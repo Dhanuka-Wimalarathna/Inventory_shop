@@ -1,6 +1,5 @@
 <?php
 
-
 class MySqli_DB {
 
     private $con;
@@ -19,7 +18,7 @@ class MySqli_DB {
 
         // Establish a secure connection
         if (!$this->con->real_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, 3306, null, MYSQLI_CLIENT_SSL)) {
-            die("Database connection failed: " . mysqli_connect_error());
+            $this->handle_error("Database connection failed: " . mysqli_connect_error());
         }
     }
 
@@ -33,14 +32,11 @@ class MySqli_DB {
 
     // Execute a database query
     public function query($sql) {
-        if (trim($sql != "")) {
+        if (trim($sql) != "") {
             $this->query_id = $this->con->query($sql);
         }
         if (!$this->query_id) {
-            // Development mode error display
-            die("Error on this query: <pre>" . $sql . "</pre>");
-            // For production mode, replace with a generic error message
-            // die("Error executing query");
+            $this->handle_error("Error executing query: <pre>" . $sql . "</pre>");
         }
         return $this->query_id;
     }
@@ -82,12 +78,20 @@ class MySqli_DB {
 
     // Loop through query results
     public function while_loop($loop) {
-        global $db;
         $results = array();
         while ($result = $this->fetch_array($loop)) {
             $results[] = $result;
         }
         return $results;
+    }
+
+    // Handle errors
+    private function handle_error($message) {
+        // Development mode error display
+        die($message);
+        // For production mode, consider logging the error and displaying a generic message
+        // error_log($message);
+        // die("An error occurred. Please try again later.");
     }
 }
 

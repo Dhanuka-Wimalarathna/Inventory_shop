@@ -11,7 +11,7 @@ function real_escape($str){
 // Remove HTML and special characters from a string
 function remove_junk($str){
   $str = nl2br($str);
-  $str = htmlspecialchars(strip_tags($str, ENT_QUOTES));
+  $str = htmlspecialchars(strip_tags($str), ENT_QUOTES);
   return $str;
 }
 
@@ -28,10 +28,10 @@ function validate_fields($var){
   foreach ($var as $field) {
     $val = remove_junk($_POST[$field]);
     if(isset($val) && $val == ''){
-      $errors = $field . " can't be blank.";
-      return $errors;
+      $errors[] = $field . " can't be blank.";
     }
   }
+  return empty($errors) ? true : $errors;
 }
 
 // Display session messages
@@ -39,12 +39,12 @@ function display_msg($msg =''){
    $output = array();
    if(!empty($msg)) {
       foreach ($msg as $key => $value) {
-         $output  = "<div class=\"alert alert-{$key}\">";
-         $output .= "<a href=\"#\" class=\"close\" data-dismiss=\"alert\">&times;</a>";
-         $output .= remove_junk(first_character($value));
-         $output .= "</div>";
+         $output[] = "<div class=\"alert alert-{$key}\">";
+         $output[] = "<a href=\"#\" class=\"close\" data-dismiss=\"alert\">&times;</a>";
+         $output[] = remove_junk(first_character($value));
+         $output[] = "</div>";
       }
-      return $output;
+      return implode("\n", $output);
    } else {
      return "" ;
    }
@@ -57,7 +57,6 @@ function redirect($url, $permanent = false)
     {
       header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
     }
-
     exit();
 }
 
@@ -68,8 +67,8 @@ function total_price($totals){
    foreach($totals as $total ){
      $sum += $total['total_saleing_price'];
      $sub += $total['total_buying_price'];
-     $profit = $sum - $sub;
    }
+   $profit = $sum - $sub;
    return array($sum, $profit);
 }
 
@@ -83,7 +82,7 @@ function read_date($str){
 
 // Create the current date and time
 function make_date(){
-  return strftime("%Y-%m-%d %H:%M:%S", time());
+  return date("Y-m-d H:i:s");
 }
 
 // Generate a unique ID by incrementing a static counter
@@ -99,7 +98,7 @@ function randString($length = 5)
   $cha = "0123456789abcdefghijklmnopqrstuvwxyz";
 
   for($x = 0; $x < $length; $x++)
-   $str .= $cha[mt_rand(0, strlen($cha))];
+   $str .= $cha[mt_rand(0, strlen($cha) - 1)];
   return $str;
 }
 ?>

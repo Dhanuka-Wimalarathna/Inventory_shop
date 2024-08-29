@@ -1,5 +1,5 @@
 <?php
-
+include_once('config.php'); 
 class MySqli_DB {
 
     private $con;

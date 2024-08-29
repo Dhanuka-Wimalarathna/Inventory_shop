@@ -14,7 +14,7 @@ class MySqli_DB {
     public function db_connect() {
         // Initialize MySQLi with SSL support
         $this->con = mysqli_init();
-        $ssl_ca = '/home/site/wwwroot/certs/ca-cert.pem'; // Ensure this path is correct
+        $ssl_ca = '/home/site/wwwroot/ca-cert.pem'; // Ensure this path is correct
         $this->con->ssl_set(null, null, $ssl_ca, null, null);
 
         // Establish a secure connection

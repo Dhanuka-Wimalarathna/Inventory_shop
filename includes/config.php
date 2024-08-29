@@ -22,9 +22,7 @@ if (!$conn->real_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, 3306, null, MYSQLI_
 if (!$conn->query("SHOW STATUS LIKE 'Ssl_cipher'")->fetch_assoc()) {
     echo json_encode(['status' => 'error', 'message' => 'SSL connection could not be established']);
     exit();
-} else {
-    echo json_encode(['status' => 'success', 'message' => 'Database connected successfully with SSL']);
-}
+
 
 // ... Your other code here ...
 
